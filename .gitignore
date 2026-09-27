@@ -1,0 +1,22 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# Local Android Studio settings
+/.idea/
+
+# Setup troubleshooting logs
+/gradle-diagnostic.txt
+/gradle-tls-diagnostic.txt
+/gradle-connection-test.txt
