@@ -1,6 +1,6 @@
 # Recipe collection
 
-This collection contains 20 recipe titles and 22 complete versions. The quantities and methods are simplified home-style versions for review; they have not been kitchen-tested. Recipe data is stored in `app/src/main/assets/recipes.json`. Database version 2 imports the collection on creation or upgrade from version 1. Suggestions are not displayed yet.
+This collection contains 20 recipe titles and 22 complete versions. The quantities and methods are simplified home-style versions for review; they have not been kitchen-tested. Recipe data is stored in `app/src/main/assets/recipes.json`. Database version 2 imports the collection on creation or upgrade from version 1. Suggested Recipes now lists complete matches and the eligible versions. Opening preparation steps is the next screen checkpoint.
 
 ## Database loading
 
@@ -10,7 +10,9 @@ SQLiteOpenHelper wraps creation and upgrade in a transaction: a failure rolls ba
 
 `RecipeDatabaseTest` checks first creation, reopening, preservation of version 1 pantry data, rollback/retry after a failed upgrade, and version-specific requirements and steps. The tests use a separate database.
 
-## Matching rules for the next stage
+## Matching rules
+
+`RecipeRepository` reads the current pantry, aliases and recipe requirements from SQLite. `RecipeMatcher` sums duplicate pantry quantities using decimal arithmetic and checks each complete version independently. `RecipeMatcherTest` covers the matching rules without an emulator. `RecipeMatchingDatabaseTest` checks the seeded collection and changes to pantry data on an emulator, using a separate test database.
 
 - A recipe is eligible only when every ingredient in at least one complete version is available in sufficient quantity. Never combine parts of different versions to produce a match.
 - Display a recipe title once, with a choice of eligible versions if both qualify. Detail instructions must correspond to the selected version.
