@@ -83,6 +83,17 @@ public class PantryDatabaseHelperTest {
     }
 
     @Test
+    public void deletedIngredientStaysDeletedAfterReopeningDatabase() {
+        long ingredientId = databaseHelper.addIngredient("Rice", 250, "g");
+        assertTrue(databaseHelper.deleteIngredient(ingredientId));
+        databaseHelper.close();
+        databaseHelper = new PantryDatabaseHelper(context, TEST_DATABASE_NAME);
+
+        assertNull(databaseHelper.getIngredient(ingredientId));
+        assertTrue(databaseHelper.getAllIngredients().isEmpty());
+    }
+
+    @Test
     public void invalidInputDoesNotAddRows() {
         assertInvalidIngredient(null, 1, "g");
         assertInvalidIngredient("   ", 1, "g");

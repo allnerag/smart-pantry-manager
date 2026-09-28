@@ -1,5 +1,6 @@
 package com.example.smartpantrymanager;
 
+import android.content.DialogInterface;
 import android.database.sqlite.SQLiteException;
 import android.os.Bundle;
 import android.view.View;
@@ -10,12 +11,14 @@ import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.graphics.Insets;
 import androidx.core.view.OnApplyWindowInsetsListener;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 
 import java.math.BigDecimal;
 
@@ -28,6 +31,7 @@ public class IngredientActivity extends AppCompatActivity {
     private TextInputLayout nameLayout;
     private TextInputLayout quantityLayout;
     private View saveButton;
+    private AlertDialog deleteDialog;
     private long ingredientId = -1;
 
     @Override
@@ -67,6 +71,63 @@ public class IngredientActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        View deleteButton = findViewById(R.id.buttonDeleteIngredient);
+        if (ingredientId != -1) {
+            deleteButton.setVisibility(View.VISIBLE);
+            deleteButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    confirmDeleteIngredient();
+                }
+            });
+        }
+    }
+
+    private void confirmDeleteIngredient() {
+        if (deleteDialog != null && deleteDialog.isShowing()) {
+            return;
+        }
+
+        try {
+            // Use the saved name, even if the form contains an unsaved name change.
+            PantryItem ingredient = databaseHelper.getIngredient(ingredientId);
+            if (ingredient == null) {
+                Toast.makeText(this, R.string.error_ingredient_missing, Toast.LENGTH_LONG).show();
+                finish();
+                return;
+            }
+
+            deleteDialog = new MaterialAlertDialogBuilder(this)
+                    .setTitle(R.string.delete_ingredient)
+                    .setMessage(getString(R.string.delete_ingredient_confirmation, ingredient.getName()))
+                    .setNegativeButton(R.string.cancel, null)
+                    .setPositiveButton(R.string.delete, new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            deleteIngredient();
+                        }
+                    })
+                    .create();
+            deleteDialog.show();
+        } catch (SQLiteException exception) {
+            Toast.makeText(this, R.string.error_database, Toast.LENGTH_LONG).show();
+        }
+    }
+
+    private void deleteIngredient() {
+        try {
+            boolean deleted = databaseHelper.deleteIngredient(ingredientId);
+            if (deleted) {
+                Toast.makeText(this, R.string.ingredient_deleted, Toast.LENGTH_SHORT).show();
+            } else {
+                Toast.makeText(this, R.string.error_ingredient_missing, Toast.LENGTH_LONG).show();
+            }
+            // Returning to the Pantry reloads its list, count and empty-state card.
+            finish();
+        } catch (SQLiteException exception) {
+            Toast.makeText(this, R.string.error_database, Toast.LENGTH_LONG).show();
+        }
     }
 
     private void loadIngredient() {
@@ -148,6 +209,9 @@ public class IngredientActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
+        if (deleteDialog != null) {
+            deleteDialog.dismiss();
+        }
         databaseHelper.close();
         super.onDestroy();
     }

@@ -18,6 +18,10 @@
     <string name="ingredient_unit_help">Use count for individual items, such as eggs.</string>
     <string name="save_ingredient">Save ingredient</string>
     <string name="cancel">Cancel</string>
+    <string name="delete_ingredient">Delete ingredient</string>
+    <string name="delete">Delete</string>
+    <string name="delete_ingredient_confirmation">Remove “%1$s” from your pantry? This cannot be undone.</string>
+    <string name="ingredient_deleted">Ingredient deleted</string>
     <string name="error_ingredient_name">Enter an ingredient name.</string>
     <string name="error_ingredient_quantity">Enter a number greater than zero, such as 1 or 0.5.</string>
     <string name="error_database">Could not access your pantry. Please try again.</string>
