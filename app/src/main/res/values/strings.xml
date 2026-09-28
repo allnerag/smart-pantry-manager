@@ -1,5 +1,11 @@
 <resources>
     <string name="app_name">Smart Pantry Manager</string>
+    <string name="navigation_pantry">Pantry</string>
+    <string name="navigation_recipes">Recipes</string>
+    <string name="navigation_settings">Settings</string>
+    <string name="recipes_heading">Suggested Recipes</string>
+    <string name="recipes_placeholder">Your recipe collection is coming soon. Keep your pantry up to date while your collection is being prepared.</string>
+    <string name="settings_placeholder">There are no preferences to change yet.</string>
     <string name="pantry_heading">My Pantry</string>
     <string name="pantry_subheading">Keep track of what you have. Make more of what is left.</string>
     <string name="pantry_count">0 ingredients</string>

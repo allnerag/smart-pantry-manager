@@ -10,12 +10,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.OnApplyWindowInsetsListener;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     private PantryDatabaseHelper databaseHelper;
@@ -27,16 +22,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        addSystemBarSpacing();
+        ScreenNavigation.setUp(this, R.id.navigationPantry);
         setUpPantryList();
     }
 
     private void setUpPantryList() {
         databaseHelper = new PantryDatabaseHelper(this);
-        ListView pantryList = findViewById(R.id.main);
+        ListView pantryList = findViewById(R.id.pantryList);
         View header = getLayoutInflater().inflate(R.layout.pantry_list_header, pantryList, false);
         View footer = getLayoutInflater().inflate(R.layout.pantry_list_footer, pantryList, false);
         pantryList.addHeaderView(header, null, false);
@@ -82,24 +76,4 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
     }
 
-    private void addSystemBarSpacing() {
-        View mainView = findViewById(R.id.main);
-
-        // Keep the screen clear of the phone's status and navigation bars.
-        ViewCompat.setOnApplyWindowInsetsListener(mainView, new OnApplyWindowInsetsListener() {
-            @Override
-            public WindowInsetsCompat onApplyWindowInsets(View view, WindowInsetsCompat insets) {
-                Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-
-                view.setPadding(
-                        systemBars.left,
-                        systemBars.top,
-                        systemBars.right,
-                        systemBars.bottom
-                );
-
-                return insets;
-            }
-        });
-    }
 }

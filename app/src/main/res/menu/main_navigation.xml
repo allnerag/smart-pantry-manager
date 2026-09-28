@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/navigationPantry"
+        android:icon="@drawable/icon_pantry"
+        android:title="@string/navigation_pantry" />
+    <item android:id="@+id/navigationRecipes"
+        android:icon="@drawable/icon_recipes"
+        android:title="@string/navigation_recipes" />
+    <item android:id="@+id/navigationSettings"
+        android:icon="@drawable/icon_settings"
+        android:title="@string/navigation_settings" />
+</menu>
