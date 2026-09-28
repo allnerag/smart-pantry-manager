@@ -1,6 +1,12 @@
 # Recipe collection
 
-This collection contains 20 recipe titles and 22 complete versions. The quantities and methods are simplified home-style versions for review; they have not been kitchen-tested. Recipe data is stored in `app/src/main/assets/recipes.json`. Database version 2 imports the collection on creation or upgrade from version 1. Suggested Recipes now lists complete matches and the eligible versions. Opening preparation steps is the next screen checkpoint.
+This collection contains 20 recipe titles and 22 complete versions. The quantities and methods are simplified home-style versions for review; they have not been kitchen-tested. Recipe data is stored in `app/src/main/assets/recipes.json`. Database version 2 imports the collection on creation or upgrade from version 1. Suggested Recipes lists complete matches and eligible versions. Each version has a button opening its ingredients, full yield and ordered preparation steps.
+
+## Recipe details
+
+The recipe button passes the selected version ID through an Intent. `RecipeDetailActivity` loads that version from SQLite and checks its availability again whenever the screen resumes. A missing ID or a changed pantry displays a message with a way back to suggestions. Viewing a recipe does not consume pantry quantities. When two versions qualify, each has its own button, ingredients and steps.
+
+`RecipeDetailDatabaseTest` checks separate version contents, ordered steps, invalid IDs and availability after a pantry edit. The visual checks include opening a version, scrolling through its steps, returning to suggestions, and selecting either version when both qualify.
 
 ## Database loading
 

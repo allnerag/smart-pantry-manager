@@ -12,6 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartPantryManager">
         <activity android:name=".RecipesActivity" android:exported="false" />
+        <activity android:name=".RecipeDetailActivity" android:exported="false" />
         <activity android:name=".SettingsActivity" android:exported="false" />
         <activity
             android:name=".IngredientActivity"

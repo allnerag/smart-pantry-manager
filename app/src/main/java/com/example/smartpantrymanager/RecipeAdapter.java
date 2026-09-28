@@ -1,11 +1,15 @@
 package com.example.smartpantrymanager;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+import android.widget.LinearLayout;
+
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 
@@ -68,6 +72,30 @@ public class RecipeAdapter extends BaseAdapter {
                     version.getLabel(), version.getYieldText()));
         }
         versionsView.setText(descriptions.toString());
+        LinearLayout actions = recipeView.findViewById(R.id.layoutRecipeActions);
+        actions.removeAllViews();
+        ArrayList<RecipeVariant> versions = suggestion.getVersions();
+        for (RecipeVariant version : versions) {
+            MaterialButton openButton = new MaterialButton(context);
+            openButton.setLayoutParams(new LinearLayout.LayoutParams(
+                    ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
+            if (versions.size() == 1) {
+                openButton.setText(R.string.view_recipe);
+            } else {
+                openButton.setText(context.getString(R.string.view_recipe_version, version.getLabel()));
+            }
+            openButton.setContentDescription(context.getString(R.string.open_recipe_description,
+                    suggestion.getTitle(), version.getLabel()));
+            openButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent detailIntent = new Intent(context, RecipeDetailActivity.class);
+                    detailIntent.putExtra(RecipeDetailActivity.EXTRA_VARIANT_ID, version.getId());
+                    context.startActivity(detailIntent);
+                }
+            });
+            actions.addView(openButton);
+        }
         return recipeView;
     }
 }
