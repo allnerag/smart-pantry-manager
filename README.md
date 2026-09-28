@@ -1,12 +1,12 @@
 # Smart Pantry Manager
 
-Smart Pantry Manager is a Java Android app being developed for the Mobile App Development 700 assignment. It aims to reduce food waste by suggesting recipes using ingredients already available at home.
+Smart Pantry Manager is a Java Android application being developed for the Mobile App Development 700 assignment. It aims to reduce food waste by suggesting recipes using ingredients already available at home.
 
 
 
 ## Project status
 
-Work in progress. 
+Work in progress. Deployed Draft version.
 
 ## 
 
@@ -18,6 +18,8 @@ Work in progress.
 * Suggest a recipe only when every required ingredient is available in a sufficient quantity.
 * Handle common ingredient names and compatible units.
 * Save pantry data and basic settings between app sessions.
+* Removed check against water and salt requirments.
+* Included a section to add your own recipes with ingredients and preparation steps.
 
 
 
@@ -26,7 +28,7 @@ Work in progress.
 * Android Studio
 * Java with XML layouts
 * SQLite using SQLiteOpenHelper
-* RecyclerView with custom adapters
+* ListView with custom adapters
 * SharedPreferences for settings
 
 
