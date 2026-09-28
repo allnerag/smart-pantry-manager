@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Smart Pantry Manager</string>
+    <string name="pantry_heading">My Pantry</string>
+    <string name="pantry_subheading">Keep track of what you have. Make more of what is left.</string>
+    <string name="pantry_count">0 ingredients</string>
+    <string name="pantry_section_heading">Your ingredients</string>
+    <string name="pantry_section_description">Everything you have at home, in one place.</string>
+    <string name="pantry_empty_heading">Your pantry is empty</string>
+    <string name="pantry_empty_description">Add the ingredients you already have to get started.</string>
+    <string name="add_ingredient">Add ingredient</string>
+    <string name="pantry_tip_heading">A little less waste</string>
+    <string name="pantry_tip_description">Check your fridge and cupboards before buying more ingredients.</string>
 </resources>

@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="richfield_navy">#043171</color>
+    <color name="richfield_blue">#0056AF</color>
+    <color name="richfield_coral">#DE473C</color>
+    <color name="pantry_background">#FAFAFA</color>
+    <color name="pantry_light_blue">#EAF2FC</color>
+    <color name="pantry_border">#DCE5EF</color>
+    <color name="pantry_text">#243247</color>
+    <color name="pantry_text_secondary">#536176</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>
