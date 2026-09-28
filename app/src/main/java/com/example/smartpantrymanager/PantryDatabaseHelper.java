@@ -10,7 +10,8 @@ import java.util.ArrayList;
 
 public class PantryDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "smart_pantry.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
+    private final Context appContext;
     private static final String TABLE_PANTRY = "pantry_items";
     private static final String COLUMN_ID = "_id";
     private static final String COLUMN_NAME = "name";
@@ -24,6 +25,13 @@ public class PantryDatabaseHelper extends SQLiteOpenHelper {
     // Tests use a separate database so they cannot change the user's pantry.
     PantryDatabaseHelper(Context context, String databaseName) {
         super(context.getApplicationContext(), databaseName, null, DATABASE_VERSION);
+        appContext = context.getApplicationContext();
+    }
+
+    @Override
+    public void onConfigure(SQLiteDatabase database) {
+        super.onConfigure(database);
+        database.setForeignKeyConstraintsEnabled(true);
     }
 
     @Override
@@ -35,12 +43,17 @@ public class PantryDatabaseHelper extends SQLiteOpenHelper {
                 + COLUMN_UNIT + " TEXT NOT NULL CHECK(unit IN ('g', 'kg', 'ml', 'l', 'count')))";
 
         database.execSQL(createPantryTable);
+        RecipeDatabaseSeeder.createAndSeed(database, appContext);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
-        // Add a migration here when the schema changes. Never erase saved ingredients.
-        throw new IllegalStateException("No database upgrade is defined for this version.");
+        if (oldVersion == 1 && newVersion == 2) {
+            // Add recipe tables without dropping or changing the user's pantry table.
+            RecipeDatabaseSeeder.createAndSeed(database, appContext);
+        } else {
+            throw new IllegalStateException("No database upgrade is defined for this version.");
+        }
     }
 
     public long addIngredient(String name, double quantity, String unit) {

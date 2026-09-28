@@ -1,6 +1,14 @@
 # Recipe collection
 
-This collection contains 20 recipe titles and 22 complete versions. The quantities and methods are simplified home-style versions for review; they have not been kitchen-tested. Recipe data is stored in `app/src/main/assets/recipes.json`. This checkpoint does not yet load recipes into SQLite or display suggestions.
+This collection contains 20 recipe titles and 22 complete versions. The quantities and methods are simplified home-style versions for review; they have not been kitchen-tested. Recipe data is stored in `app/src/main/assets/recipes.json`. Database version 2 imports the collection on creation or upgrade from version 1. Suggestions are not displayed yet.
+
+## Database loading
+
+`RecipeDatabaseSeeder` adds the recipe tables without changing `pantry_items`. It stores ingredient names and aliases, recipe titles, complete versions, quantity requirements and numbered preparation steps. The `recipe_collection` table records which collection version was imported.
+
+SQLiteOpenHelper wraps creation and upgrade in a transaction: a failure rolls back the recipe import rather than leaving a partial collection. Reopening a version 2 database does not import the data again. Future collection changes will need an explicit migration; changing the JSON alone will not update existing installations.
+
+`RecipeDatabaseTest` checks first creation, reopening, preservation of version 1 pantry data, rollback/retry after a failed upgrade, and version-specific requirements and steps. The tests use a separate database.
 
 ## Matching rules for the next stage
 
