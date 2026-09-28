@@ -10,4 +10,30 @@
     <string name="add_ingredient">Add ingredient</string>
     <string name="pantry_tip_heading">A little less waste</string>
     <string name="pantry_tip_description">Check your fridge and cupboards before buying more ingredients.</string>
+    <string name="edit_ingredient">Edit ingredient</string>
+    <string name="ingredient_form_description">Enter what you have and how much is available.</string>
+    <string name="ingredient_name_label">Ingredient name</string>
+    <string name="ingredient_quantity_label">Quantity</string>
+    <string name="ingredient_unit_label">Unit</string>
+    <string name="ingredient_unit_help">Use count for individual items, such as eggs.</string>
+    <string name="save_ingredient">Save ingredient</string>
+    <string name="cancel">Cancel</string>
+    <string name="error_ingredient_name">Enter an ingredient name.</string>
+    <string name="error_ingredient_quantity">Enter a number greater than zero, such as 1 or 0.5.</string>
+    <string name="error_database">Could not access your pantry. Please try again.</string>
+    <string name="error_ingredient_missing">This ingredient is no longer available.</string>
+    <string name="ingredient_saved">Ingredient saved</string>
+    <string name="ingredient_quantity_display">%1$s %2$s</string>
+    <string name="edit_ingredient_description">Edit %1$s</string>
+    <plurals name="ingredient_count">
+        <item quantity="one">%d ingredient</item>
+        <item quantity="other">%d ingredients</item>
+    </plurals>
+    <string-array name="ingredient_units">
+        <item>g</item>
+        <item>kg</item>
+        <item>ml</item>
+        <item>l</item>
+        <item>count</item>
+    </string-array>
 </resources>
