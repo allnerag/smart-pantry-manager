@@ -11,30 +11,40 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background_pantry_card"
-        android:padding="20dp"
-        android:orientation="vertical">
+        android:paddingStart="14dp"
+        android:paddingEnd="6dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <TextView
             android:id="@+id/textIngredientName"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:textColor="@color/richfield_navy"
-            android:textSize="20sp"
+            android:textSize="18sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textIngredientQuantity"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="6dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="4dp"
+            android:maxWidth="96dp"
+            android:gravity="end"
             android:textColor="@color/pantry_text_secondary"
             android:textSize="16sp" />
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/buttonEditIngredient"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/edit_ingredient" />
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="14dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/icon_edit"
+            android:contentDescription="@string/edit_ingredient" />
     </LinearLayout>
 </LinearLayout>

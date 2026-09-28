@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         pantryAdapter = new PantryAdapter(this);
         pantryList.setAdapter(pantryAdapter);
 
-        footer.findViewById(R.id.buttonAddIngredient).setOnClickListener(new View.OnClickListener() {
+        header.findViewById(R.id.buttonAddIngredient).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent addIntent = new Intent(MainActivity.this, IngredientActivity.class);
