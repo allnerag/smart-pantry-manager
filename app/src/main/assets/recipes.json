@@ -1,0 +1,1449 @@
+{
+  "schemaVersion": 1,
+  "collectionVersion": 1,
+  "ingredients": [
+    {
+      "id": "maize_meal",
+      "name": "Maize meal",
+      "unit": "g",
+      "aliases": [
+        "mielie meal",
+        "mealie meal",
+        "pap flour"
+      ]
+    },
+    {
+      "id": "cooked_pap",
+      "name": "Cooked pap",
+      "unit": "g",
+      "aliases": [
+        "pap",
+        "prepared pap"
+      ]
+    },
+    {
+      "id": "boerewors",
+      "name": "Boerewors",
+      "unit": "g",
+      "aliases": [
+        "wors"
+      ]
+    },
+    {
+      "id": "potato",
+      "name": "Potatoes",
+      "unit": "g",
+      "aliases": [
+        "potato",
+        "aartappels"
+      ]
+    },
+    {
+      "id": "prepared_mash",
+      "name": "Prepared mash",
+      "unit": "g",
+      "aliases": [
+        "mash",
+        "mashed potatoes",
+        "prepared mashed potatoes"
+      ]
+    },
+    {
+      "id": "milk",
+      "name": "Milk",
+      "unit": "ml",
+      "aliases": []
+    },
+    {
+      "id": "butter",
+      "name": "Butter",
+      "unit": "g",
+      "aliases": []
+    },
+    {
+      "id": "salt",
+      "name": "Salt",
+      "unit": "g",
+      "aliases": []
+    },
+    {
+      "id": "water",
+      "name": "Water",
+      "unit": "ml",
+      "aliases": [
+        "drinking water"
+      ]
+    },
+    {
+      "id": "vienna",
+      "name": "Viennas",
+      "unit": "count",
+      "aliases": [
+        "vienna",
+        "vienna sausage",
+        "vienna sausages"
+      ]
+    },
+    {
+      "id": "long_bun",
+      "name": "Long buns",
+      "unit": "count",
+      "aliases": [
+        "long bun",
+        "hot dog bun",
+        "hot dog buns",
+        "hotdog buns"
+      ]
+    },
+    {
+      "id": "corned_beef",
+      "name": "Bully beef",
+      "unit": "g",
+      "aliases": [
+        "corned beef",
+        "canned corned beef"
+      ]
+    },
+    {
+      "id": "egg",
+      "name": "Eggs",
+      "unit": "count",
+      "aliases": [
+        "egg"
+      ]
+    },
+    {
+      "id": "oil",
+      "name": "Cooking oil",
+      "unit": "ml",
+      "aliases": [
+        "oil",
+        "sunflower oil",
+        "vegetable oil"
+      ]
+    },
+    {
+      "id": "pasta",
+      "name": "Dry pasta",
+      "unit": "g",
+      "aliases": [
+        "pasta",
+        "noodles",
+        "dry noodles",
+        "macaroni",
+        "spaghetti"
+      ]
+    },
+    {
+      "id": "cheese",
+      "name": "Cheese",
+      "unit": "g",
+      "aliases": [
+        "cheddar",
+        "cheddar cheese",
+        "gouda",
+        "gouda cheese"
+      ]
+    },
+    {
+      "id": "white_sauce",
+      "name": "Prepared white sauce",
+      "unit": "ml",
+      "aliases": [
+        "white sauce",
+        "white souse",
+        "bechamel"
+      ]
+    },
+    {
+      "id": "flour",
+      "name": "Cake flour",
+      "unit": "g",
+      "aliases": [
+        "plain flour",
+        "all purpose flour",
+        "all-purpose flour"
+      ]
+    },
+    {
+      "id": "sugar",
+      "name": "Sugar",
+      "unit": "g",
+      "aliases": [
+        "white sugar",
+        "granulated sugar"
+      ]
+    },
+    {
+      "id": "baking_powder",
+      "name": "Baking powder",
+      "unit": "g",
+      "aliases": []
+    },
+    {
+      "id": "beef_mince",
+      "name": "Beef mince",
+      "unit": "g",
+      "aliases": [
+        "minced beef",
+        "ground beef"
+      ]
+    },
+    {
+      "id": "onion",
+      "name": "Onions",
+      "unit": "g",
+      "aliases": [
+        "onion"
+      ]
+    },
+    {
+      "id": "bread",
+      "name": "Bread",
+      "unit": "g",
+      "aliases": [
+        "white bread",
+        "brown bread"
+      ]
+    },
+    {
+      "id": "black_pepper",
+      "name": "Black pepper",
+      "unit": "g",
+      "aliases": [
+        "ground black pepper"
+      ]
+    },
+    {
+      "id": "curry_powder",
+      "name": "Curry powder",
+      "unit": "g",
+      "aliases": []
+    },
+    {
+      "id": "chutney",
+      "name": "Chutney",
+      "unit": "g",
+      "aliases": []
+    },
+    {
+      "id": "raisin",
+      "name": "Raisins",
+      "unit": "g",
+      "aliases": [
+        "raisin"
+      ]
+    },
+    {
+      "id": "lamb",
+      "name": "Stewing lamb",
+      "unit": "g",
+      "aliases": [
+        "lamb stew meat",
+        "lamb stewing meat"
+      ]
+    },
+    {
+      "id": "tomato",
+      "name": "Tomatoes",
+      "unit": "g",
+      "aliases": [
+        "tomato"
+      ]
+    },
+    {
+      "id": "beef_stew",
+      "name": "Stewing beef",
+      "unit": "g",
+      "aliases": [
+        "beef stew meat",
+        "beef stewing meat"
+      ]
+    },
+    {
+      "id": "carrot",
+      "name": "Carrots",
+      "unit": "g",
+      "aliases": [
+        "carrot"
+      ]
+    },
+    {
+      "id": "beef_stock",
+      "name": "Prepared beef stock",
+      "unit": "ml",
+      "aliases": [
+        "beef stock",
+        "liquid beef stock"
+      ]
+    },
+    {
+      "id": "chicken",
+      "name": "Boneless chicken",
+      "unit": "g",
+      "aliases": [
+        "chicken breast",
+        "chicken breasts",
+        "boneless chicken breast"
+      ]
+    },
+    {
+      "id": "puff_pastry",
+      "name": "Puff pastry",
+      "unit": "g",
+      "aliases": [
+        "ready-made puff pastry"
+      ]
+    },
+    {
+      "id": "yeast",
+      "name": "Instant yeast",
+      "unit": "g",
+      "aliases": [
+        "instant dry yeast"
+      ]
+    },
+    {
+      "id": "cooked_pumpkin",
+      "name": "Cooked pumpkin",
+      "unit": "g",
+      "aliases": [
+        "mashed cooked pumpkin",
+        "cooked mashed pumpkin"
+      ]
+    },
+    {
+      "id": "cinnamon",
+      "name": "Ground cinnamon",
+      "unit": "g",
+      "aliases": [
+        "cinnamon"
+      ]
+    },
+    {
+      "id": "cream",
+      "name": "Cream",
+      "unit": "ml",
+      "aliases": [
+        "fresh cream"
+      ]
+    },
+    {
+      "id": "cornflour",
+      "name": "Cornflour",
+      "unit": "g",
+      "aliases": [
+        "corn starch",
+        "cornstarch"
+      ]
+    },
+    {
+      "id": "vanilla",
+      "name": "Vanilla essence",
+      "unit": "ml",
+      "aliases": [
+        "vanilla extract"
+      ]
+    },
+    {
+      "id": "apricot_jam",
+      "name": "Apricot jam",
+      "unit": "g",
+      "aliases": []
+    },
+    {
+      "id": "bicarb",
+      "name": "Bicarbonate of soda",
+      "unit": "g",
+      "aliases": [
+        "baking soda",
+        "bicarb"
+      ]
+    },
+    {
+      "id": "vinegar",
+      "name": "White vinegar",
+      "unit": "ml",
+      "aliases": [
+        "spirit vinegar"
+      ]
+    }
+  ],
+  "recipes": [
+    {
+      "id": "pap_wors",
+      "title": "Pap and wors",
+      "variants": [
+        {
+          "id": "pap_raw",
+          "label": "Make pap from maize meal",
+          "yield": "2 servings",
+          "ingredients": [
+            {
+              "ingredientId": "maize_meal",
+              "quantity": 200,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "water",
+              "quantity": 800,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 2,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "boerewors",
+              "quantity": 300,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Bring the water and salt to a boil in a heavy saucepan. Gradually stir in the maize meal.",
+            "Reduce to low heat, cover and cook for about 30 minutes, stirring regularly, until the pap is cooked and thick.",
+            "Grill the boerewors over moderate heat, turning regularly, until cooked through. Serve with the pap."
+          ]
+        },
+        {
+          "id": "pap_prepared",
+          "label": "Use cooked pap",
+          "yield": "2 servings",
+          "ingredients": [
+            {
+              "ingredientId": "cooked_pap",
+              "quantity": 500,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "water",
+              "quantity": 50,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "boerewors",
+              "quantity": 300,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Break the cooked pap into a saucepan and add the water. Cover and warm gently, stirring, until steaming throughout.",
+            "Grill the boerewors over moderate heat, turning regularly, until cooked through. Serve with the reheated pap."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mash_wors",
+      "title": "Mash and wors",
+      "variants": [
+        {
+          "id": "mash_raw",
+          "label": "Make mash from potatoes",
+          "yield": "2 servings",
+          "ingredients": [
+            {
+              "ingredientId": "potato",
+              "quantity": 500,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "water",
+              "quantity": 1500,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "milk",
+              "quantity": 100,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "butter",
+              "quantity": 20,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 2,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "boerewors",
+              "quantity": 300,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Peel and dice the potatoes. Put in a saucepan with the water and bring to a boil. Simmer for 15–20 minutes until tender.",
+            "Drain the potatoes. Warm the milk and mash it into the potatoes with the butter and salt.",
+            "Grill the boerewors over moderate heat, turning regularly, until cooked through. Serve with the mash."
+          ]
+        },
+        {
+          "id": "mash_prepared",
+          "label": "Use prepared mash",
+          "yield": "2 servings",
+          "ingredients": [
+            {
+              "ingredientId": "prepared_mash",
+              "quantity": 500,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "boerewors",
+              "quantity": 300,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Reheat the prepared mash in a covered microwave-safe dish, stirring at intervals, until steaming throughout.",
+            "Grill the boerewors over moderate heat, turning regularly, until cooked through. Serve with the reheated mash."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vienna_hotdogs",
+      "title": "Vienna hot dogs",
+      "variants": [
+        {
+          "id": "vienna_default",
+          "label": "Standard",
+          "yield": "2 servings",
+          "ingredients": [
+            {
+              "ingredientId": "vienna",
+              "quantity": 4,
+              "unit": "count"
+            },
+            {
+              "ingredientId": "long_bun",
+              "quantity": 4,
+              "unit": "count"
+            },
+            {
+              "ingredientId": "water",
+              "quantity": 1000,
+              "unit": "ml"
+            }
+          ],
+          "steps": [
+            "Heat the water in a saucepan. Heat the Viennas in it according to their package instructions until steaming hot.",
+            "Drain the Viennas, split the buns and put one Vienna in each bun. Serve two per person."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boerie_rolls",
+      "title": "Boerewors rolls",
+      "variants": [
+        {
+          "id": "boerie_default",
+          "label": "Standard",
+          "yield": "2 servings",
+          "ingredients": [
+            {
+              "ingredientId": "boerewors",
+              "quantity": 300,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "long_bun",
+              "quantity": 4,
+              "unit": "count"
+            }
+          ],
+          "steps": [
+            "Grill the boerewors over moderate heat, turning regularly, until cooked through.",
+            "Split the buns. Cut the cooked boerewors into four portions and put one portion in each bun."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bully_eggs",
+      "title": "Bully beef and eggs",
+      "variants": [
+        {
+          "id": "bully_eggs_default",
+          "label": "Standard",
+          "yield": "2 servings",
+          "ingredients": [
+            {
+              "ingredientId": "corned_beef",
+              "quantity": 300,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "egg",
+              "quantity": 4,
+              "unit": "count"
+            },
+            {
+              "ingredientId": "oil",
+              "quantity": 10,
+              "unit": "ml"
+            }
+          ],
+          "steps": [
+            "Break up the bully beef. Warm the oil in a frying pan and heat the beef until steaming hot.",
+            "Beat the eggs, pour them into the pan and stir gently until the eggs are fully set. Serve immediately."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "creamy_pasta",
+      "title": "Creamy cheese pasta with white sauce",
+      "variants": [
+        {
+          "id": "creamy_pasta_default",
+          "label": "Standard",
+          "yield": "2 servings",
+          "ingredients": [
+            {
+              "ingredientId": "pasta",
+              "quantity": 200,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "water",
+              "quantity": 2000,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "white_sauce",
+              "quantity": 250,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "cheese",
+              "quantity": 100,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Boil the pasta in the water for the time on its packet, then drain.",
+            "Heat the prepared white sauce gently in the saucepan. Grate the cheese and stir it into the sauce until melted.",
+            "Add the drained pasta and stir over low heat until hot throughout."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bully_cheese_pasta",
+      "title": "Bully beef and cheese pasta",
+      "variants": [
+        {
+          "id": "bully_pasta_default",
+          "label": "Standard",
+          "yield": "2 servings",
+          "ingredients": [
+            {
+              "ingredientId": "corned_beef",
+              "quantity": 300,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "pasta",
+              "quantity": 200,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "water",
+              "quantity": 2000,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "cheese",
+              "quantity": 100,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Boil the pasta in the water following the packet timing. Reserve 50 ml of the cooking water before draining.",
+            "Break up the bully beef in the saucepan. Add the reserved water and heat until steaming.",
+            "Stir in the pasta and grated cheese. Heat gently until the cheese melts."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sweet_muffins",
+      "title": "Plain sweet muffins",
+      "variants": [
+        {
+          "id": "sweet_muffins_default",
+          "label": "Standard",
+          "yield": "12 muffins",
+          "ingredients": [
+            {
+              "ingredientId": "flour",
+              "quantity": 250,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "sugar",
+              "quantity": 120,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "baking_powder",
+              "quantity": 10,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 2,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "egg",
+              "quantity": 2,
+              "unit": "count"
+            },
+            {
+              "ingredientId": "milk",
+              "quantity": 200,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "oil",
+              "quantity": 80,
+              "unit": "ml"
+            }
+          ],
+          "steps": [
+            "Heat the oven to 180°C and line a 12-hole muffin tin with paper cases.",
+            "Mix the flour, sugar, baking powder and salt in one bowl. Beat the eggs, milk and oil in another.",
+            "Fold the wet mixture into the dry ingredients just until no dry flour remains. Divide between the cases.",
+            "Bake for 20–25 minutes until risen and a skewer inserted in the centre comes out clean. Cool on a rack."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "savoury_muffins",
+      "title": "Cheese savoury muffins",
+      "variants": [
+        {
+          "id": "savoury_muffins_default",
+          "label": "Standard",
+          "yield": "12 muffins",
+          "ingredients": [
+            {
+              "ingredientId": "flour",
+              "quantity": 250,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "cheese",
+              "quantity": 150,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "baking_powder",
+              "quantity": 10,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 2,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "egg",
+              "quantity": 2,
+              "unit": "count"
+            },
+            {
+              "ingredientId": "milk",
+              "quantity": 200,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "oil",
+              "quantity": 60,
+              "unit": "ml"
+            }
+          ],
+          "steps": [
+            "Heat the oven to 180°C and line a 12-hole muffin tin with paper cases.",
+            "Mix the flour, baking powder, salt and grated cheese. In another bowl beat the eggs, milk and oil.",
+            "Fold the wet mixture into the dry ingredients just until combined. Divide between the cases.",
+            "Bake for 20–25 minutes until golden and a skewer comes out clean. Cool before serving."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "frikkadels",
+      "title": "Frikkadels",
+      "variants": [
+        {
+          "id": "frikkadels_default",
+          "label": "Standard",
+          "yield": "4 servings",
+          "ingredients": [
+            {
+              "ingredientId": "beef_mince",
+              "quantity": 500,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "onion",
+              "quantity": 100,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "bread",
+              "quantity": 60,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "milk",
+              "quantity": 60,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "egg",
+              "quantity": 1,
+              "unit": "count"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 4,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "black_pepper",
+              "quantity": 1,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "oil",
+              "quantity": 20,
+              "unit": "ml"
+            }
+          ],
+          "steps": [
+            "Finely chop the onion. Soak the bread in the milk and mash with a fork.",
+            "Mix the mince, onion, soaked bread, egg, salt and pepper. Shape into eight evenly sized meatballs.",
+            "Heat the oil in a large frying pan. Brown the meatballs on all sides, then reduce the heat and cover.",
+            "Cook gently, turning, until the centres are fully cooked. Serve the meatballs on their own."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bobotie",
+      "title": "Bobotie",
+      "variants": [
+        {
+          "id": "bobotie_default",
+          "label": "Standard",
+          "yield": "4 servings",
+          "ingredients": [
+            {
+              "ingredientId": "beef_mince",
+              "quantity": 500,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "onion",
+              "quantity": 150,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "bread",
+              "quantity": 60,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "milk",
+              "quantity": 250,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "egg",
+              "quantity": 2,
+              "unit": "count"
+            },
+            {
+              "ingredientId": "oil",
+              "quantity": 15,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "curry_powder",
+              "quantity": 10,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "chutney",
+              "quantity": 40,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "raisin",
+              "quantity": 40,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 4,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Heat the oven to 180°C. Chop the onion and soften it in the oil in a frying pan.",
+            "Add the mince and cook, breaking it up. Stir in the curry powder and salt.",
+            "Soak the bread in 100 ml of the milk. Mash it and stir it into the mince with the chutney and raisins. Cook for five minutes, then transfer to a baking dish.",
+            "Beat the eggs with the remaining 150 ml milk. Pour over the mince and bake for about 35 minutes until the topping is set and the centre is piping hot."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tomato_bredie",
+      "title": "Tomato bredie",
+      "variants": [
+        {
+          "id": "bredie_default",
+          "label": "Standard",
+          "yield": "4 servings",
+          "ingredients": [
+            {
+              "ingredientId": "lamb",
+              "quantity": 600,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "tomato",
+              "quantity": 600,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "onion",
+              "quantity": 150,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "potato",
+              "quantity": 400,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "oil",
+              "quantity": 20,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "water",
+              "quantity": 400,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 5,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "black_pepper",
+              "quantity": 1,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Cut the lamb into chunks, chop the onion and tomatoes, and peel and cube the potatoes.",
+            "Heat the oil in a heavy pot. Brown the lamb in batches, then soften the onion in the same pot.",
+            "Return all the lamb to the pot. Add the tomatoes, water, salt and pepper. Cover and simmer gently for 60 minutes.",
+            "Add the potatoes. Cover and simmer for another 30–45 minutes until the lamb and potatoes are tender, stirring occasionally."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "beef_potjie",
+      "title": "Beef potjiekos",
+      "variants": [
+        {
+          "id": "potjie_default",
+          "label": "Standard",
+          "yield": "4 servings",
+          "ingredients": [
+            {
+              "ingredientId": "beef_stew",
+              "quantity": 600,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "onion",
+              "quantity": 150,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "carrot",
+              "quantity": 250,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "potato",
+              "quantity": 400,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "beef_stock",
+              "quantity": 750,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "oil",
+              "quantity": 20,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 3,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "black_pepper",
+              "quantity": 1,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Cut the beef into chunks. Chop the onion and cut the carrots and potatoes into thick pieces.",
+            "Heat the oil in a heavy pot or potjie. Brown the beef in batches and soften the onion.",
+            "Add the stock, salt and pepper. Cover and simmer gently for 90 minutes.",
+            "Layer the carrots and potatoes on top. Cover and cook gently for another 45–60 minutes until the beef and vegetables are tender. Check the liquid level and reduce the heat if it boils rapidly."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "chicken_pie",
+      "title": "Chicken pie",
+      "variants": [
+        {
+          "id": "chicken_pie_default",
+          "label": "Standard",
+          "yield": "4 servings",
+          "ingredients": [
+            {
+              "ingredientId": "chicken",
+              "quantity": 500,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "onion",
+              "quantity": 100,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "butter",
+              "quantity": 30,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "flour",
+              "quantity": 30,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "milk",
+              "quantity": 350,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "puff_pastry",
+              "quantity": 250,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "egg",
+              "quantity": 1,
+              "unit": "count"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 4,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "black_pepper",
+              "quantity": 1,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Dice the chicken and onion. Melt the butter in a pan and gently cook the onion, then add the chicken and cook it through.",
+            "Stir in the flour. Gradually add the milk while stirring, then add the salt and pepper. Simmer until thickened.",
+            "Transfer the filling to a pie dish and let it cool until no longer steaming. Heat the oven to 200°C.",
+            "Cover with the puff pastry without rolling it on a floured surface. Cut a steam vent and brush with the beaten egg.",
+            "Bake for 25–30 minutes until the pastry is golden and the filling is piping hot."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vetkoek_mince",
+      "title": "Vetkoek with curried mince",
+      "variants": [
+        {
+          "id": "vetkoek_default",
+          "label": "Standard",
+          "yield": "8 vetkoek (4 servings)",
+          "ingredients": [
+            {
+              "ingredientId": "flour",
+              "quantity": 500,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "yeast",
+              "quantity": 7,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "sugar",
+              "quantity": 20,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 8,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "water",
+              "quantity": 425,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "oil",
+              "quantity": 1015,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "beef_mince",
+              "quantity": 400,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "onion",
+              "quantity": 150,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "curry_powder",
+              "quantity": 10,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "tomato",
+              "quantity": 200,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Mix the flour, yeast, sugar and 5 g of the salt. Add 325 ml lukewarm water and knead in the bowl until smooth. Cover and leave to rise until doubled, about one hour.",
+            "For the filling, chop the onion and tomatoes. Heat 15 ml of the oil in a pan, soften the onion and brown the mince. Add the curry powder, tomatoes, remaining 3 g salt and remaining 100 ml water. Simmer for 20 minutes until cooked and thick.",
+            "Divide the dough into eight pieces on baking paper, shape and rest for 15 minutes.",
+            "Heat the remaining 1000 ml oil in a deep, stable saucepan to about 170°C; the oil must fill less than half the pan. Fry in small batches, turning, until golden and cooked through. Drain on kitchen paper.",
+            "Split the vetkoek and spoon the hot mince into them."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "braaibroodjies",
+      "title": "Braaibroodjies",
+      "variants": [
+        {
+          "id": "braaibroodjies_default",
+          "label": "Standard",
+          "yield": "2 servings",
+          "ingredients": [
+            {
+              "ingredientId": "bread",
+              "quantity": 160,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "cheese",
+              "quantity": 100,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "tomato",
+              "quantity": 120,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "onion",
+              "quantity": 40,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "butter",
+              "quantity": 20,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Use four bread slices weighing about 160 g in total. Thinly slice the tomato and onion and grate the cheese.",
+            "Spread the butter on the outside faces of the bread. Place cheese, tomato and onion between each pair of slices.",
+            "Toast in a braai grid over gentle coals, or in a dry pan over low heat, turning until both sides are golden and the cheese has melted."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pumpkin_fritters",
+      "title": "Pumpkin fritters",
+      "variants": [
+        {
+          "id": "pumpkin_fritters_default",
+          "label": "Standard",
+          "yield": "12 small fritters",
+          "ingredients": [
+            {
+              "ingredientId": "cooked_pumpkin",
+              "quantity": 300,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "flour",
+              "quantity": 120,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "egg",
+              "quantity": 1,
+              "unit": "count"
+            },
+            {
+              "ingredientId": "baking_powder",
+              "quantity": 5,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 1,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "sugar",
+              "quantity": 30,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "cinnamon",
+              "quantity": 2,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "oil",
+              "quantity": 60,
+              "unit": "ml"
+            }
+          ],
+          "steps": [
+            "Mash the cooked pumpkin and drain any loose liquid. Beat in the egg, then stir in the flour, baking powder and salt.",
+            "Mix the sugar and cinnamon separately for coating.",
+            "Heat the oil in a frying pan over medium heat. Fry spoonfuls of batter in batches, turning once, until golden and cooked through.",
+            "Drain on kitchen paper and sprinkle with the cinnamon sugar."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "potato_bake",
+      "title": "Potato bake",
+      "variants": [
+        {
+          "id": "potato_bake_default",
+          "label": "Standard",
+          "yield": "4 side servings",
+          "ingredients": [
+            {
+              "ingredientId": "potato",
+              "quantity": 800,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "cream",
+              "quantity": 250,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "milk",
+              "quantity": 150,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "cheese",
+              "quantity": 100,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 4,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "black_pepper",
+              "quantity": 1,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Heat the oven to 180°C. Peel the potatoes and slice them very thinly.",
+            "Layer the potatoes in a baking dish with the salt and pepper. Pour over the cream and milk.",
+            "Cover with foil and bake for 60 minutes. Remove the foil, add grated cheese and bake for another 20–30 minutes until the potatoes are tender. Rest for 10 minutes before serving."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "milk_tart",
+      "title": "Milk tart",
+      "variants": [
+        {
+          "id": "milk_tart_default",
+          "label": "Standard",
+          "yield": "8 slices",
+          "ingredients": [
+            {
+              "ingredientId": "flour",
+              "quantity": 200,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "butter",
+              "quantity": 100,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "sugar",
+              "quantity": 140,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "egg",
+              "quantity": 3,
+              "unit": "count"
+            },
+            {
+              "ingredientId": "milk",
+              "quantity": 750,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "cornflour",
+              "quantity": 45,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "vanilla",
+              "quantity": 5,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "cinnamon",
+              "quantity": 2,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "For the crust, mix 80 g softened butter with 40 g sugar, then beat in one egg. Mix in the flour to form a soft dough. Press into a 23 cm tart tin and chill for 20 minutes.",
+            "Heat the oven to 180°C. Line the crust with baking paper and baking weights. Bake for 15 minutes, remove the paper and weights, then bake for another 10 minutes until cooked and lightly golden.",
+            "For the filling, whisk the remaining two eggs with the cornflour, remaining 100 g sugar and 150 ml of the milk.",
+            "Heat the remaining 600 ml milk until steaming. Slowly whisk it into the egg mixture, return to the saucepan and cook over low heat while stirring until thick and gently bubbling. Cook for a further two minutes.",
+            "Remove from heat and stir in the remaining 20 g butter and the vanilla. Pour into the crust, sprinkle with cinnamon, cool and refrigerate until set."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "malva_pudding",
+      "title": "Malva pudding",
+      "variants": [
+        {
+          "id": "malva_default",
+          "label": "Standard",
+          "yield": "6 servings",
+          "ingredients": [
+            {
+              "ingredientId": "flour",
+              "quantity": 150,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "sugar",
+              "quantity": 200,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "egg",
+              "quantity": 1,
+              "unit": "count"
+            },
+            {
+              "ingredientId": "apricot_jam",
+              "quantity": 30,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "milk",
+              "quantity": 150,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "bicarb",
+              "quantity": 5,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "vinegar",
+              "quantity": 15,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "butter",
+              "quantity": 80,
+              "unit": "g"
+            },
+            {
+              "ingredientId": "cream",
+              "quantity": 200,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "water",
+              "quantity": 100,
+              "unit": "ml"
+            },
+            {
+              "ingredientId": "salt",
+              "quantity": 1,
+              "unit": "g"
+            }
+          ],
+          "steps": [
+            "Heat the oven to 180°C. Use 5 g of the butter to grease a medium baking dish.",
+            "Beat the egg with 120 g of the sugar, then beat in the apricot jam. Melt 15 g butter and mix it with the milk and vinegar.",
+            "Mix the flour, bicarbonate of soda and salt. Fold this into the egg mixture alternately with the milk mixture. Pour into the dish.",
+            "Bake for 30–40 minutes until risen and a skewer inserted into the centre comes out clean.",
+            "Gently heat the cream, water, remaining 80 g sugar and remaining 60 g butter in a saucepan, stirring until dissolved.",
+            "Prick the hot pudding and slowly pour the hot sauce over it. Allow it to absorb before serving."
+          ]
+        }
+      ]
+    }
+  ]
+}
