@@ -33,10 +33,10 @@ public class RecipeMatchingDatabaseTest {
     }
 
     @Test
-    public void preparedPapNeedsWaterAndEnoughWorsAfterEveryEdit() {
+    public void preparedPapIgnoresWaterButNeedsEnoughWorsAfterEveryEdit() {
         helper.addIngredient("pap", 1, "kg");
         long worsId = helper.addIngredient("WORS", 0.3, "kg");
-        assertFalse(hasVersion("pap_prepared"));
+        assertTrue(hasVersion("pap_prepared"));
         long waterId = helper.addIngredient("water", 0.05, "l");
         assertTrue(hasVersion("pap_prepared"));
         helper.updateIngredient(worsId, "wors", 299, "g");
@@ -44,15 +44,14 @@ public class RecipeMatchingDatabaseTest {
         helper.updateIngredient(worsId, "wors", 300, "g");
         assertTrue(hasVersion("pap_prepared"));
         helper.deleteIngredient(waterId);
-        assertFalse(hasVersion("pap_prepared"));
+        assertTrue(hasVersion("pap_prepared"));
     }
 
     @Test
-    public void rawPapRequiresSaltAndDoesNotCountAsCookedPap() {
+    public void rawPapIgnoresSaltAndWaterAndDoesNotCountAsCookedPap() {
         helper.addIngredient("maize meal", 200, "g");
         helper.addIngredient("wors", 300, "g");
-        helper.addIngredient("water", 800, "ml");
-        assertFalse(hasVersion("pap_raw"));
+        assertTrue(hasVersion("pap_raw"));
         helper.addIngredient("salt", 2, "g");
         assertTrue(hasVersion("pap_raw"));
         assertFalse(hasVersion("pap_prepared"));
@@ -94,8 +93,12 @@ public class RecipeMatchingDatabaseTest {
                 }
             }
             assertTrue("Version did not match: " + variantId, hasVersion(variantId));
-            PantryItem firstItem = helper.getAllIngredients().get(0);
-            helper.deleteIngredient(firstItem.getId());
+            for (PantryItem item : helper.getAllIngredients()) {
+                if (!item.getName().equalsIgnoreCase("Water") && !item.getName().equalsIgnoreCase("Salt")) {
+                    helper.deleteIngredient(item.getId());
+                    break;
+                }
+            }
             assertFalse("Incomplete version matched: " + variantId, hasVersion(variantId));
         }
     }

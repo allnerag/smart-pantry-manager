@@ -62,6 +62,9 @@ public class RecipeMatcher {
         }
         HashMap<String, BigDecimal> requiredTotals = new HashMap<>();
         for (RecipeRequirement requirement : requirements) {
+            if ("water".equals(requirement.getIngredientId()) || "salt".equals(requirement.getIngredientId())) {
+                continue;
+            }
             if (!isValidQuantity(requirement.getQuantity()) || baseUnit(requirement.getUnit()) == null) {
                 return false;
             }

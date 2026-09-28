@@ -15,10 +15,16 @@ import java.util.ArrayList;
 
 public class RecipeAdapter extends BaseAdapter {
     private final Context context;
+    private final boolean collectionMode;
     private final ArrayList<RecipeSuggestion> suggestions = new ArrayList<>();
 
     public RecipeAdapter(Context context) {
+        this(context, false);
+    }
+
+    public RecipeAdapter(Context context, boolean collectionMode) {
         this.context = context;
+        this.collectionMode = collectionMode;
     }
 
     public void setSuggestions(ArrayList<RecipeSuggestion> updatedSuggestions) {
@@ -91,6 +97,7 @@ public class RecipeAdapter extends BaseAdapter {
                 public void onClick(View view) {
                     Intent detailIntent = new Intent(context, RecipeDetailActivity.class);
                     detailIntent.putExtra(RecipeDetailActivity.EXTRA_VARIANT_ID, version.getId());
+                    detailIntent.putExtra(RecipeDetailActivity.EXTRA_COLLECTION_MODE, collectionMode);
                     context.startActivity(detailIntent);
                 }
             });

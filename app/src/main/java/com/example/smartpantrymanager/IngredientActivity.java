@@ -50,6 +50,18 @@ public class IngredientActivity extends AppCompatActivity {
         saveButton = findViewById(R.id.buttonSaveIngredient);
         ingredientId = getIntent().getLongExtra(EXTRA_INGREDIENT_ID, -1);
 
+        // Apply the preference only to a new form, not an edit or restored draft.
+        if (ingredientId == -1 && savedInstanceState == null) {
+            String defaultUnit = new AppSettings(this).getDefaultUnit();
+            String[] units = getResources().getStringArray(R.array.ingredient_units);
+            for (int position = 0; position < units.length; position++) {
+                if (units[position].equals(defaultUnit)) {
+                    unitSpinner.setSelection(position);
+                    break;
+                }
+            }
+        }
+
         if (ingredientId != -1) {
             TextView heading = findViewById(R.id.textFormHeading);
             heading.setText(R.string.edit_ingredient);

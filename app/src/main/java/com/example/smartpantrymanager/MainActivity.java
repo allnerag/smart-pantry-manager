@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private PantryAdapter pantryAdapter;
     private TextView ingredientCountView;
     private View emptyPantryView;
+    private View pantryTipView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         ListView pantryList = findViewById(R.id.pantryList);
         View header = getLayoutInflater().inflate(R.layout.pantry_list_header, pantryList, false);
         View footer = getLayoutInflater().inflate(R.layout.pantry_list_footer, pantryList, false);
+        pantryTipView = footer.findViewById(R.id.layoutPantryTip);
         pantryList.addHeaderView(header, null, false);
         pantryList.addFooterView(footer, null, false);
 
@@ -53,9 +55,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
+        AppSettings settings = new AppSettings(this);
+        if (settings.isTipVisible()) {
+            pantryTipView.setVisibility(View.VISIBLE);
+        } else {
+            pantryTipView.setVisibility(View.GONE);
+        }
         // Reload after returning from the form, including after an edit.
         try {
-            ArrayList<PantryItem> ingredients = databaseHelper.getAllIngredients();
+            ArrayList<PantryItem> ingredients = databaseHelper.getAllIngredients(settings.isNewestFirst());
             pantryAdapter.setIngredients(ingredients);
             int ingredientCount = ingredients.size();
             ingredientCountView.setText(getResources().getQuantityString(

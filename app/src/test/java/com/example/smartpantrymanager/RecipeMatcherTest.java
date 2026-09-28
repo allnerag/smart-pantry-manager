@@ -39,9 +39,22 @@ public class RecipeMatcherTest {
     }
 
     @Test
-    public void missingWaterIsNotAssumedAvailable() {
-        assertTrue(matches(items(item("pap", 500, "g"), item("wors", 300, "g")),
-                preparedPap()).isEmpty());
+    public void missingWaterDoesNotBlockAMatch() {
+        assertEquals(1, matches(items(item("pap", 500, "g"), item("wors", 300, "g")),
+                preparedPap()).size());
+    }
+
+    @Test
+    public void waterAndSaltAreOptionalButOilAndOtherSeasoningAreRequired() {
+        RecipeVariant recipe = version("seasoned", "recipe", requirement("egg", 2, "count"),
+                requirement("water", 100, "ml"), requirement("salt", 2, "g"));
+        assertEquals(1, matches(items(item("eggs", 2, "count")), recipe).size());
+        assertTrue(matches(items(item("eggs", 1, "count")), recipe).isEmpty());
+        RecipeVariant oil = version("oil", "recipe", requirement("egg", 2, "count"),
+                requirement("oil", 10, "ml"));
+        RecipeVariant pepper = version("pepper", "recipe", requirement("egg", 2, "count"),
+                requirement("pepper", 1, "g"));
+        assertTrue(matches(items(item("eggs", 2, "count")), oil, pepper).isEmpty());
     }
 
     @Test
@@ -90,7 +103,7 @@ public class RecipeMatcherTest {
 
     @Test
     public void partialVersionsCannotBeMixedTogether() {
-        ArrayList<PantryItem> pantry = items(item("pap", 250, "g"), item("maize meal", 200, "g"),
+        ArrayList<PantryItem> pantry = items(item("pap", 250, "g"), item("maize meal", 100, "g"),
                 item("wors", 300, "g"), item("water", 50, "ml"));
         assertTrue(matches(pantry, preparedPap(), rawPap()).isEmpty());
     }

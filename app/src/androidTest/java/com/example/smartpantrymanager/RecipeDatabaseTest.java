@@ -40,7 +40,7 @@ public class RecipeDatabaseTest {
         SQLiteDatabase database = helper.getReadableDatabase();
         assertCollectionCounts(database);
         assertTrue(helper.getAllIngredients().isEmpty());
-        assertEquals(2, database.getVersion());
+        assertEquals(3, database.getVersion());
         try (Cursor errors = database.rawQuery("PRAGMA foreign_key_check", null)) {
             assertFalse(errors.moveToFirst());
         }
@@ -72,7 +72,7 @@ public class RecipeDatabaseTest {
         createVersionOneDatabase(false);
         SQLiteDatabase upgradedDatabase = helper.getWritableDatabase();
         assertCollectionCounts(upgradedDatabase);
-        assertEquals(2, upgradedDatabase.getVersion());
+        assertEquals(3, upgradedDatabase.getVersion());
         PantryItem ingredient = helper.getIngredient(91);
         assertNotNull(ingredient);
         assertEquals("Rice", ingredient.getName());

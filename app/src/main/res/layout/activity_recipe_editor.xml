@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/recipeEditorScreen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/pantry_background">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <TextView
+            android:id="@+id/textRecipeEditorTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_pantry_header"
+            android:padding="24dp"
+            android:text="@string/add_recipe"
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textEditingVersion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/pantry_text_secondary"
+            android:textSize="16sp" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/recipe_name">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editRecipeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                android:maxLength="120" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:hint="@string/recipe_yield_label">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editRecipeServings"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:maxLength="80" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/recipe_ingredients_heading"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/richfield_navy" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/recipe_ingredients_help"
+            android:textSize="16sp"
+            android:textColor="@color/pantry_text_secondary" />
+        <LinearLayout
+            android:id="@+id/layoutEditorIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:saveEnabled="false" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonRecipeIngredient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_ingredient" />
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/recipe_steps_heading">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editRecipeSteps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapSentences"
+                android:gravity="top"
+                android:minLines="4" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/recipe_steps_help"
+            android:textSize="16sp"
+            android:textColor="@color/pantry_text_secondary" />
+        <TextView
+            android:id="@+id/textRecipeEditorError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/richfield_coral"
+            android:textSize="16sp"
+            android:accessibilityLiveRegion="assertive" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonSaveRecipe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save_recipe" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonCancelRecipe"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel" />
+    </LinearLayout>
+</ScrollView>

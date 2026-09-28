@@ -20,12 +20,12 @@ SQLiteOpenHelper wraps creation and upgrade in a transaction: a failure rolls ba
 
 `RecipeRepository` reads the current pantry, aliases and recipe requirements from SQLite. `RecipeMatcher` sums duplicate pantry quantities using decimal arithmetic and checks each complete version independently. `RecipeMatcherTest` covers the matching rules without an emulator. `RecipeMatchingDatabaseTest` checks the seeded collection and changes to pantry data on an emulator, using a separate test database.
 
-- A recipe is eligible only when every ingredient in at least one complete version is available in sufficient quantity. Never combine parts of different versions to produce a match.
+- A recipe is eligible only when every ingredient except water and salt in at least one complete version is available in sufficient quantity. Never combine parts of different versions to produce a match.
 - Display a recipe title once, with a choice of eligible versions if both qualify. Detail instructions must correspond to the selected version.
 - Raw maize meal and cooked pap are different ingredients. Potatoes and prepared mash are different ingredients. Do not infer a cooked yield from raw stock.
 - Quantities are for the full yield listed, not one serving. For example, the muffin requirements make 12 muffins.
 - Sum pantry duplicates after resolving aliases and compatible units. Convert only g/kg and ml/l; do not convert count to mass, or mass to volume.
-- All listed ingredients are required, including water, salt and oil. No garnish, sauce or side dish is assumed. Adding these requires updating the ingredient list too.
+- Water and salt are listed for cooking but excluded from pantry matching. All other listed ingredients, including oil, are required. No garnish, sauce or side dish is assumed. Adding these requires updating the ingredient list too.
 - Deep-frying oil is the amount needed in the pan, not an estimate of how much is eaten.
 - `count` means individual eggs, Viennas or buns, not packets. Bread, onions and potatoes are weighed in g. Stock and white sauce mean prepared liquids, not powder or cubes.
 - Plain dry pasta can use the listed aliases. Instant noodles, cooked pasta, self-raising flour and stock cubes are not substitutes for the corresponding dry pasta, cake flour or prepared stock entries.
@@ -434,5 +434,5 @@ Steps:
 
 - Confirm the ingredient choices and batch sizes suit the intended recipes.
 - Check both pap versions and both mash versions.
-- Keep the water requirement in mind when testing strict matching.
+- Water and salt must not block suggestions; other missing ingredients must still block them.
 - Before the recipe screen is complete, verify the data loader and matcher using missing-ingredient, insufficient-quantity, duplicate-item, compatible-unit and incompatible-unit cases.

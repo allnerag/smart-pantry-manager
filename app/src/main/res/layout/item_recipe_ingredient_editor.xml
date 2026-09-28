@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="12dp"
+    android:background="@drawable/background_pantry_card"
+    android:padding="12dp"
+    android:orientation="vertical">
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ingredient_name_label">
+        <androidx.appcompat.widget.AppCompatAutoCompleteTextView
+            android:id="@+id/editRecipeIngredientName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:inputType="textCapSentences"
+            android:completionThreshold="1"
+            android:saveEnabled="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="@string/ingredient_quantity_label">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editRecipeIngredientQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:saveEnabled="false" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <Spinner
+            android:id="@+id/spinnerRecipeIngredientUnit"
+            android:layout_width="110dp"
+            android:layout_height="56dp"
+            android:entries="@array/ingredient_units"
+            android:prompt="@string/ingredient_unit_label"
+            android:contentDescription="@string/ingredient_unit_label"
+            android:spinnerMode="dialog"
+            android:saveEnabled="false" />
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonRemoveRecipeIngredient"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/remove_recipe_ingredient" />
+</LinearLayout>

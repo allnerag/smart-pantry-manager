@@ -18,6 +18,21 @@ public class RecipeRepository {
         return matcher.findMatches(databaseHelper.getAllIngredients(), readVariants());
     }
 
+    public ArrayList<RecipeSuggestion> getCollection() {
+        ArrayList<RecipeSuggestion> collection = new ArrayList<>();
+        HashMap<String, RecipeSuggestion> byId = new HashMap<>();
+        for (RecipeVariant version : readVariants()) {
+            RecipeSuggestion recipe = byId.get(version.getRecipeId());
+            if (recipe == null) {
+                recipe = new RecipeSuggestion(version.getRecipeId(), version.getTitle());
+                byId.put(version.getRecipeId(), recipe);
+                collection.add(recipe);
+            }
+            recipe.addVersion(version);
+        }
+        return collection;
+    }
+
     public RecipeDetail getRecipeDetail(String variantId) {
         if (variantId == null || variantId.trim().isEmpty()) {
             return null;

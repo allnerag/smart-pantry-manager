@@ -1,10 +1,31 @@
 <resources>
+    <string name="recipe_collection">Recipe collection</string>
+    <string name="collection_help">Browse all loaded recipes, including those you cannot make yet. Open a recipe to see its ingredients and preparation. You can edit any recipe. Recipes you add yourself can also be deleted.</string>
+    <string name="collection_count">%1$d recipes · %2$d versions loaded</string>
+    <string name="back_to_settings">Back to settings</string>
+    <string name="back_to_collection">Back to collection</string>
+    <string name="add_recipe">Add recipe</string>
+    <string name="edit_recipe">Edit recipe</string>
+    <string name="delete_recipe">Delete recipe</string>
+    <string name="save_recipe">Save recipe</string>
+    <string name="recipe_name">Recipe name</string>
+    <string name="recipe_servings">Servings</string>
+    <string name="recipe_ingredients_help">Enter every ingredient, including water, oil and seasoning. Choose a suggested name or enter your own. Use the same name in your pantry. Use one row per ingredient. Water and salt stay in the instructions but are not checked against your pantry.</string>
+    <string name="recipe_steps_help">Write one preparation step per line.</string>
+    <string name="remove_recipe_ingredient">Remove ingredient</string>
+    <string name="recipe_name_required">Enter a recipe name.</string>
+    <string name="recipe_servings_required">Enter a whole number greater than zero.</string>
+    <string name="recipe_saved">Recipe saved</string>
+    <string name="recipe_deleted">Recipe deleted</string>
+    <string name="personal_recipe_missing">This recipe version is no longer available for editing.</string>
+    <string name="collection_recipe_unavailable">Some ingredients are missing or insufficient. Water and salt are not checked. You can still read this recipe below.</string>
+    <string name="delete_recipe_confirmation">Delete “%1$s” from your recipe collection? This cannot be undone. Your pantry ingredients will stay saved.</string>
     <string name="app_name">Smart Pantry Manager</string>
     <string name="navigation_pantry">Pantry</string>
     <string name="navigation_recipes">Recipes</string>
     <string name="navigation_settings">Settings</string>
     <string name="recipes_heading">Suggested Recipes</string>
-    <string name="recipes_matching_explanation">Only recipes with enough of every ingredient appear here. Add all required ingredients to your pantry, including water, oil and seasoning.</string>
+    <string name="recipes_matching_explanation">Recipes appear when you have enough of all ingredients except water and salt. Water and salt do not need to be in your pantry. Oil and other seasoning still count.</string>
     <string name="recipes_no_matches">No complete matches yet. Check your pantry names, quantities and units. Use maize meal for uncooked pap, or pap for cooked pap.</string>
     <string name="recipe_version_description">%1$s\n%2$s</string>
     <string name="view_recipe">View recipe</string>
@@ -14,8 +35,8 @@
     <string name="recipe_ingredients_heading">Ingredients</string>
     <string name="recipe_steps_heading">Preparation</string>
     <string name="recipe_detail_heading">Recipe Detail</string>
-    <string name="recipe_available">You have enough of every ingredient for this version.</string>
-    <string name="recipe_unavailable">Your pantry no longer has enough ingredients for this version. Return to recipes for current suggestions.</string>
+    <string name="recipe_available">You have enough ingredients for this version. Water and salt are not checked.</string>
+    <string name="recipe_unavailable">Your pantry no longer has enough ingredients for this version, excluding water and salt. Return to recipes for current suggestions.</string>
     <string name="recipe_missing">This recipe could not be found. Return to recipes and choose it again.</string>
     <string name="recipe_ingredient_line">%1$s — %2$s %3$s</string>
     <string name="recipe_step_line">%1$d. %2$s</string>
@@ -24,7 +45,18 @@
         <item quantity="one">%d recipe available with your pantry ingredients</item>
         <item quantity="other">%d recipes available with your pantry ingredients</item>
     </plurals>
-    <string name="settings_placeholder">There are no preferences to change yet.</string>
+    <string name="settings_intro">Choose how your pantry works, then tap Save settings.</string>
+    <string name="settings_default_unit">Default ingredient unit</string>
+    <string name="settings_unit_help">Used for new ingredients only. Saved ingredients keep their own units.</string>
+    <string name="settings_pantry_sort">Pantry order</string>
+    <string name="settings_tip">Show food-saving tip</string>
+    <string name="settings_tip_help">Show the tip below your pantry ingredients.</string>
+    <string name="save_settings">Save settings</string>
+    <string name="settings_saved">Settings saved</string>
+    <string-array name="pantry_sort_options">
+        <item>Name (A–Z)</item>
+        <item>Newest added first</item>
+    </string-array>
     <string name="pantry_heading">My Pantry</string>
     <string name="pantry_subheading">Keep track of what you have. Make more of what is left.</string>
     <string name="pantry_count">0 ingredients</string>
@@ -66,4 +98,7 @@
         <item>l</item>
         <item>count</item>
     </string-array>
+    <string name="recipe_yield_label">Amount made (e.g. 2 servings or 12 muffins)</string>
+    <string name="recipe_yield_required">Enter an amount such as 2 servings or 12 muffins.</string>
+    <string name="editing_version_note">Editing: %1$s. Ingredients and preparation apply to this version. The recipe name is shared by all its versions.</string>
 </resources>

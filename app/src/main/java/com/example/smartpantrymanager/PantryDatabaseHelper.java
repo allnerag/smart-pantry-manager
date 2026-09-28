@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class PantryDatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "smart_pantry.db";
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 3;
     private final Context appContext;
     private static final String TABLE_PANTRY = "pantry_items";
     private static final String COLUMN_ID = "_id";
@@ -44,16 +44,23 @@ public class PantryDatabaseHelper extends SQLiteOpenHelper {
 
         database.execSQL(createPantryTable);
         RecipeDatabaseSeeder.createAndSeed(database, appContext);
+        addRecipeOwnership(database);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase database, int oldVersion, int newVersion) {
-        if (oldVersion == 1 && newVersion == 2) {
+        if (oldVersion < 2) {
             // Add recipe tables without dropping or changing the user's pantry table.
             RecipeDatabaseSeeder.createAndSeed(database, appContext);
-        } else {
-            throw new IllegalStateException("No database upgrade is defined for this version.");
         }
+        if (oldVersion < 3) {
+            addRecipeOwnership(database);
+        }
+    }
+
+    private void addRecipeOwnership(SQLiteDatabase database) {
+        database.execSQL("ALTER TABLE recipes ADD COLUMN user_created INTEGER NOT NULL DEFAULT 0 "
+                + "CHECK(user_created IN (0, 1))");
     }
 
     public long addIngredient(String name, double quantity, String unit) {
@@ -63,12 +70,20 @@ public class PantryDatabaseHelper extends SQLiteOpenHelper {
     }
 
     public ArrayList<PantryItem> getAllIngredients() {
+        return getAllIngredients(false);
+    }
+
+    public ArrayList<PantryItem> getAllIngredients(boolean newestFirst) {
         ArrayList<PantryItem> ingredients = new ArrayList<>();
         SQLiteDatabase database = getReadableDatabase();
+        String sortOrder = COLUMN_NAME + " COLLATE NOCASE ASC, " + COLUMN_ID + " ASC";
+        if (newestFirst) {
+            sortOrder = COLUMN_ID + " DESC";
+        }
 
         try (Cursor cursor = database.query(
                 TABLE_PANTRY, null, null, null, null, null,
-                COLUMN_NAME + " COLLATE NOCASE ASC, " + COLUMN_ID + " ASC")) {
+                sortOrder)) {
             while (cursor.moveToNext()) {
                 ingredients.add(readIngredient(cursor));
             }

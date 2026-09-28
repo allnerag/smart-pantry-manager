@@ -109,6 +109,25 @@
             </LinearLayout>
         </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/layoutPersonalRecipeActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="20dp">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonEditRecipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/edit_recipe" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonDeleteRecipe"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/delete_recipe" />
+        </LinearLayout>
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonBackToRecipes"
             android:layout_width="match_parent"
